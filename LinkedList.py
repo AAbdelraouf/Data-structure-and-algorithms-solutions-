@@ -1,45 +1,92 @@
 class Node:
+    def __init__(self, data = None):
+        self.data = data
+        self.nextNode = None
 
-    def __init__(self, rootData):
+class Linked_List:
+    def __init__(self):
+        self.Linked_List_Nodes = None
+    
+    def printNodes(self):
+        linkedlist = self.Linked_List_Nodes
+        while linkedlist is not None:
+            print(linkedlist.data)
+            linkedlist = linkedlist.nextNode
 
-        self.left = None
-        self.right = None
-        self.rootData = rootData
+list1 = Linked_List()
+list1.Linked_List_Nodes = Node("First Node")
+list2 = Node("Second Node")
+list3 = Node("Thirs Node")
+list4 = Node("4th Node")
+list1.Linked_List_Nodes.nextNode = list2
+list2.nextNode = list3
+list3.nextNode = list4
+print(list1.printNodes())
+# Linked List try number 3 #
+# class node:
+#     def __init__(self, data = None):
+#         self.data = data
+#         self.nextNode = None
 
-# Define insert function #
-    def insert(self, data):
-# Compare the new value with the parent node
-        # If rootData is true/exist
-        if self.rootData:
+# class MyLinkedList:
+#     def __init__(self):
+#         self.Linked_List_Nodes = None
+
+#     def printList(self):
+#         while self.Linked_List_Nodes is not None:
+#             print(self.Linked_List_Nodes.data)
+#             self.Linked_List_Nodes = self.Linked_List_Nodes.nextNode
+
+# list1 = MyLinkedList()
+# list1.Linked_List_Nodes = node("First Thing")
+# list2 = node("Second Things")
+# list1.Linked_List_Nodes.nextNode = list2
+# list1.printList()
+
+
+
+# class Node:
+
+#     def __init__(self, rootData):
+
+#         self.left = None
+#         self.right = None
+#         self.rootData = rootData
+
+# # Define insert function #
+#     def insert(self, data):
+# # Compare the new value with the parent node
+#         # If rootData is true/exist
+#         if self.rootData:
             
-            if data < self.rootData:
-                if self.left is None:
-                    self.left = Node(data)
-                else:
-                    self.left.insert(data)
-            elif data > self.rootData:
-                if self.right is None:
-                    self.right = Node(data)
-                else:
-                    self.right.insert(data)
-        else:
-            self.data = data
+#             if data < self.rootData:
+#                 if self.left is None:
+#                     self.left = Node(data)
+#                 else:
+#                     self.left.insert(data)
+#             elif data > self.rootData:
+#                 if self.right is None:
+#                     self.right = Node(data)
+#                 else:
+#                     self.right.insert(data)
+#         else:
+#             self.data = data
 
-# Print the tree
-    def PrintTree(self):
-        if self.left:
-            self.left.PrintTree()
-        print( self.rootData),
-        if self.right:
-            self.right.PrintTree()
+# # Print the tree
+#     def PrintTree(self):
+#         if self.left:
+#             self.left.PrintTree()
+#         print( self.rootData),
+#         if self.right:
+#             self.right.PrintTree()
 
-# Use the insert method to add nodes
-root = Node(12)
-root.insert(6)
-root.insert(14)
-root.insert(3)
+# # Use the insert method to add nodes
+# root = Node(12)
+# root.insert(6)
+# root.insert(14)
+# root.insert(3)
 
-root.PrintTree()
+# root.PrintTree()
 
 
 
@@ -179,17 +226,17 @@ root.PrintTree()
 
 # class MyLinkedList:
 #     def __init__(self):
-#         self.firstNode = None
+#         self.Linked_List_Nodes = None
 
 #     def printList(self):
-#         while self.firstNode is not None:
-#             print(self.firstNode.data)
-#             self.firstNode = self.firstNode.nextNode
+#         while self.Linked_List_Nodes is not None:
+#             print(self.Linked_List_Nodes.data)
+#             self.Linked_List_Nodes = self.Linked_List_Nodes.nextNode
 
 # list1 = MyLinkedList()
-# list1.firstNode = node("First Thing")
+# list1.Linked_List_Nodes = node("First Thing")
 # list2 = node("Second Things")
-# list1.firstNode.nextNode = list2
+# list1.Linked_List_Nodes.nextNode = list2
 # list1.printList()
 
 
